@@ -1,4 +1,3 @@
 # importing the logger inside the main file
-from src import logger
-
+from src.cnnClassifier import logger
 logger.info("Welcome to our custom log")
