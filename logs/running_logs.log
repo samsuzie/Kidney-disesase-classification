@@ -54,3 +54,328 @@
 [2024-11-26 22:52:24,869:INFO:main:>>>>>> stage Data Ingestion stage  completed <<<<<<
 
 x==========x]
+[2024-11-27 23:43:52,490:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-27 23:43:52,507:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-27 23:43:52,510:INFO:common:Created directory at :artifacts]
+[2024-11-27 23:43:52,513:INFO:common:Created directory at :artifacts/prepare_base_model]
+[2024-11-27 23:44:06,349:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-27 23:52:49,628:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-27 23:52:49,636:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-27 23:52:49,636:INFO:common:Created directory at :artifacts]
+[2024-11-27 23:52:49,641:INFO:common:Created directory at :artifacts/prepare_base_model]
+[2024-11-27 23:52:50,119:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-27 23:52:50,396:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-27 23:53:15,988:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-27 23:53:15,988:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-27 23:53:15,997:INFO:common:Created directory at :artifacts]
+[2024-11-27 23:53:15,997:INFO:common:Created directory at :artifacts/prepare_base_model]
+[2024-11-27 23:53:16,331:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-27 23:53:16,534:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-28 09:19:31,488:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 09:19:31,504:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 09:19:31,504:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 09:19:31,504:INFO:common:Created directory at :artifacts]
+[2024-11-28 09:19:31,504:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 09:19:31,504:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 09:22:48,542:ERROR:main:('Connection broken: IncompleteRead(769551370 bytes read, 171570876 more expected)', IncompleteRead(769551370 bytes read, 171570876 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 748, in _error_catcher
+    yield
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 894, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(769551370 bytes read, 171570876 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 977, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 872, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 772, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(769551370 bytes read, 171570876 more expected)', IncompleteRead(769551370 bytes read, 171570876 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\main.py", line 15, in <module>
+    obj.main()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(769551370 bytes read, 171570876 more expected)', IncompleteRead(769551370 bytes read, 171570876 more expected))
+[2024-11-28 09:23:08,687:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 09:23:08,718:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 09:23:08,722:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 09:23:08,722:INFO:common:Created directory at :artifacts]
+[2024-11-28 09:23:08,722:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 09:23:08,722:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 11:46:31,263:ERROR:main:('Connection broken: IncompleteRead(22800716 bytes read, 918321530 more expected)', IncompleteRead(22800716 bytes read, 918321530 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 748, in _error_catcher
+    yield
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 894, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(22800716 bytes read, 918321530 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 977, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 872, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 772, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(22800716 bytes read, 918321530 more expected)', IncompleteRead(22800716 bytes read, 918321530 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\main.py", line 15, in <module>
+    obj.main()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(22800716 bytes read, 918321530 more expected)', IncompleteRead(22800716 bytes read, 918321530 more expected))
+[2024-11-28 11:46:43,611:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 11:46:43,614:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 11:46:43,617:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 11:46:43,618:INFO:common:Created directory at :artifacts]
+[2024-11-28 11:46:43,618:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 11:46:43,618:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 11:53:20,316:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 11:53:20,316:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 11:53:20,331:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 11:53:20,331:INFO:common:Created directory at :artifacts]
+[2024-11-28 11:53:20,331:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 11:53:20,331:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 11:55:30,718:ERROR:main:('Connection broken: IncompleteRead(33926234 bytes read, 907196012 more expected)', IncompleteRead(33926234 bytes read, 907196012 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 748, in _error_catcher
+    yield
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 894, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(33926234 bytes read, 907196012 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 977, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 872, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 772, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(33926234 bytes read, 907196012 more expected)', IncompleteRead(33926234 bytes read, 907196012 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\main.py", line 15, in <module>
+    obj.main()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(33926234 bytes read, 907196012 more expected)', IncompleteRead(33926234 bytes read, 907196012 more expected))
+[2024-11-28 11:56:02,879:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 11:56:02,881:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 11:56:02,881:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 11:56:02,881:INFO:common:Created directory at :artifacts]
+[2024-11-28 11:56:02,881:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 11:56:02,881:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:16:00,343:ERROR:main:('Connection broken: IncompleteRead(504474716 bytes read, 436647530 more expected)', IncompleteRead(504474716 bytes read, 436647530 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 748, in _error_catcher
+    yield
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 894, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(504474716 bytes read, 436647530 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 977, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 872, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\response.py", line 772, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(504474716 bytes read, 436647530 more expected)', IncompleteRead(504474716 bytes read, 436647530 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\main.py", line 15, in <module>
+    obj.main()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(504474716 bytes read, 436647530 more expected)', IncompleteRead(504474716 bytes read, 436647530 more expected))
+[2024-11-28 12:16:09,735:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 12:16:09,740:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 12:16:09,740:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 12:16:09,740:INFO:common:Created directory at :artifacts]
+[2024-11-28 12:16:09,743:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 12:16:09,743:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:16:21,800:ERROR:main:HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000130D57BAE70>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))]
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000130D57BAE70>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000130D57BAE70>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\main.py", line 15, in <module>
+    obj.main()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.download_file()
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "C:\Users\samri\OneDrive\Documents\Desktop\Kidney-disesase-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samri\AppData\Roaming\Python\Python312\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000130D57BAE70>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+[2024-11-28 15:55:04,816:INFO:main:>>>>>>stageData Ingestion stage  started <<<<<<]
+[2024-11-28 15:55:04,826:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 15:55:04,836:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 15:55:04,836:INFO:common:Created directory at :artifacts]
+[2024-11-28 15:55:04,836:INFO:common:Created directory at :artifacts/data_ingestion]
+[2024-11-28 15:55:04,836:INFO:data_ingestion:Downloading data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 15:58:23,707:INFO:data_ingestion:Downloaded data from https://drive.google.com/file/d/1CkBfV4rP4tiCP5Q8XTpZTH2naliiuO1m/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-11-28 15:58:44,921:INFO:main:>>>>>> stage Data Ingestion stage  completed <<<<<<
+
+x==========x]
+[2024-11-28 15:58:44,921:INFO:main:>>>>>>stagePrepare base model started <<<<<<]
+[2024-11-28 15:58:44,921:INFO:common:yaml file:config\config.yaml loaded sucessfully]
+[2024-11-28 15:58:44,926:INFO:common:yaml file:params.yaml loaded sucessfully]
+[2024-11-28 15:58:44,926:INFO:common:Created directory at :artifacts]
+[2024-11-28 15:58:44,931:INFO:common:Created directory at :artifacts/prepare_base_model]
+[2024-11-28 15:58:45,968:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-28 15:58:46,346:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-11-28 15:58:46,636:INFO:main:>>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]

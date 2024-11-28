@@ -1,8 +1,8 @@
-AUGMENTATION: True
-IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
+AUGMENTATION: True  #because we will be performing runtime augmentation
+IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model , as VGG16 uses this input size
 BATCH_SIZE: 16
-INCLUDE_TOP: False
-EPOCHS: 1
+INCLUDE_TOP: False  #because we don't want to include the top layers i.e the Dense layers
+EPOCHS: 1 
 CLASSES: 2
-WEIGHTS: imagenet
+WEIGHTS: imagenet  #because when we will be downloading the VGG16 model we will be telling the weights = imagenet because it is a pretrained model that is trained on the imagenet dataset
 LEARNING_RATE: 0.01
